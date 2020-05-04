@@ -82,7 +82,10 @@
     <Compile Include="Assets\Scripts\ServiceLocator\ServiceLocatorMonoBehavior.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Views\FlashLightUI.cs" />
+    <Compile Include="Assets\Scripts\Views\FlashLightUIBar.cs" />
+    <Compile Include="Assets\Scripts\Views\SelectionObjectMessageUI.cs" />
     <Compile Include="Assets\Scripts\Views\UIInterface.cs" />
+    <Compile Include="Assets\Scripts\Views\WeaponUIText.cs" />
     <Reference Include="UnityEngine.UI">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>

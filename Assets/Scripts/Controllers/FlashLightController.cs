@@ -6,13 +6,13 @@ namespace SecondAttempt
     public class FlashLightController : BaseController, IExecute, IInitialization
     {
         private FlashLightModel _flashLightModel;
-        private FlashLightUI _flashLightUI;
+        private FlashLightUIText _flashLightUI;
         private bool _light;
 
         public void Initialization()
         {
             _flashLightModel = Object.FindObjectOfType<FlashLightModel>();
-            _flashLightUI = Object.FindObjectOfType<FlashLightUI>();
+            _flashLightUI = Object.FindObjectOfType<FlashLightUIText>();
         }
 
         public void Execute()
