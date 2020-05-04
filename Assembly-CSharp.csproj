@@ -79,6 +79,12 @@
     <Compile Include="Assets\Scripts\ServiceLocator\ServiceLocatorMonoBehavior.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Views\FlashLightUI.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -87,9 +93,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -102,9 +105,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>G:/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
