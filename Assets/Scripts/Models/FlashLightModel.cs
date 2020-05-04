@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SecondAttempt
 {
-    public sealed class FlashLightModel : BaseObjectScene
+    public sealed class FlashLightModel : BaseObjectInScene
     {
         #region FIELDS
 

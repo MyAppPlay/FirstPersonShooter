@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace SecondAttempt
 {
-    public class FlashLightUI : MonoBehaviour
+    public class FlashLightUIText : MonoBehaviour
     {
         private Text _infoBattery;
         private Image _infoBattaryFill;

@@ -3,14 +3,19 @@
 
 namespace SecondAttempt
 {
-    public abstract class BaseObjectScene : MonoBehaviour
+    public abstract class BaseObjectInScene : MonoBehaviour
     {
         #region FIELDS
 
         private GameObject _objectInScene;
         private int _layer;
         private Ray _ray;
+        private Color _color;
+        private bool _isVisible;
         private GameObject _previusObject;
+
+        [HideInInspector] public Rigidbody Rigidbody;
+        [HideInInspector] public Transform Transform;
 
         #endregion
 
@@ -29,10 +34,6 @@ namespace SecondAttempt
             }
         }
 
-        public Rigidbody Rigidbody { get; private set; }
-
-        public Transform Transform { get; private set; }
-
         public int Layer
         {
             get => _layer;
@@ -40,6 +41,35 @@ namespace SecondAttempt
             {
                 _layer = value;
                 AskLayer(Transform, _layer);
+            }
+        }
+
+        public string Name
+        {
+            get => gameObject.name;
+            set => gameObject.name = value;
+        }
+
+        public Color Color
+        {
+            get => _color;
+            set
+            {
+                _color = value;
+                AskColor(transform, _color);
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => _isVisible;
+            set
+            {
+                _isVisible = value;
+                RendererSetActive(transform);
+                if (transform.childCount <= 0) return; //В середине кода?
+                foreach (Transform t in transform)
+                    RendererSetActive(t);
             }
         }
 
@@ -67,7 +97,7 @@ namespace SecondAttempt
 
         private void AskLayer(Transform obj, int layer)
         {
-            gameObject.layer = layer;
+            obj.gameObject.layer = layer;
             if (obj.childCount <= 0) return;
 
             foreach (Transform child in obj)
@@ -76,10 +106,51 @@ namespace SecondAttempt
             }
         }
 
-        #endregion
+        private void AskColor(Transform obj, Color color)
+        {
+            foreach (var curMaterial in obj.GetComponent<Renderer>().materials)
+            {
+                curMaterial.color = color;
+            }
+            if (obj.childCount <= 0) return;
+            foreach (Transform d in obj)
+                AskColor(d, color);
+        }
 
+        public void DisableRigidbody()  //  А как же SOLID  ???
+        {
+            var rigidbodies = GetComponentsInChildren<Rigidbody>();
+            foreach (var rb in rigidbodies)
+                rb.isKinematic = true;
+        }
 
-        #region METODS
+        public void EnableRigidbody(float force)
+        {
+            EnableRigidbody();
+            Rigidbody.AddForce(transform.forward * force);
+        }
+
+        public void EnableRigidbody()
+        {
+            var rigidbodies = GetComponentsInChildren<Rigidbody>();
+            foreach (var rb in rigidbodies)
+                rb.isKinematic = false;
+        }
+
+        private void RendererSetActive(Transform renderer)
+        {
+            if (renderer.gameObject.TryGetComponent<Renderer>(out var component))
+            {
+                component.enabled = _isVisible;
+            }
+        }
+
+        public void SetActive(bool value)
+        {
+            IsVisible = value;
+            if (TryGetComponent<Collider>(out var component))
+                component.enabled = value;
+        }
 
         private void ViewNameObject()
         {
@@ -108,6 +179,13 @@ namespace SecondAttempt
                 ObjectInScene.AddComponent<Light>().type = LightType.Point;
                 ObjectInScene.GetComponent<Light>().intensity = 5;
             }
+        }
+
+        public void RigidbodyConstraints(RigidbodyConstraints rigidbodyConstraints)
+        {
+            var rigidbodies = GetComponentsInChildren<Rigidbody>();
+            foreach (var rb in rigidbodies)
+                rb.constraints = rigidbodyConstraints;
         }
 
         #endregion

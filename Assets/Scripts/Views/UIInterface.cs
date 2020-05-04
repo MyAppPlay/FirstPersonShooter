@@ -1,23 +1,65 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 
 namespace SecondAttempt
 {
-    public class UIInterface : MonoBehaviour
+    public sealed class UIInterface : MonoBehaviour
     {
-        static public Text SelectionObjectMessageUI;
+        #region Fields
 
-        static public string Text()
+        private FlashLightUIText _flashLightUIText;
+        private FlashLightUIBar _flashLightUIBar;
+        private WeaponUIText _weaponUIText;
+        private SelectionObjectMessageUI _selectionObjectMessageUI;
+
+        #endregion
+
+
+        #region Properties
+
+        public FlashLightUIText LightUIText
         {
-            return SelectionObjectMessageUI.text;
+            get
+            {
+                if (!_flashLightUIText)
+                    _flashLightUIText = FindObjectOfType<FlashLightUIText>();
+                return _flashLightUIText;
+            }
         }
 
-        static public string GetMessage()
+
+        public FlashLightUIBar FlashLightUIBar
         {
-            return SelectionObjectMessageUI.name;
+            get
+            {
+                if (!_flashLightUIBar)
+                    _flashLightUIBar = GetComponent<FlashLightUIBar>();
+                return _flashLightUIBar;
+            }
         }
+
+
+        public WeaponUIText WeaponUIText
+        {
+            get
+            {
+                if (!_weaponUIText)
+                    _weaponUIText = GetComponent<WeaponUIText>();
+                return _weaponUIText;
+            }
+        }
+
+
+        public SelectionObjectMessageUI SelectionObjectMessageUI
+        {
+            get
+            {
+                if (!_selectionObjectMessageUI)
+                    _selectionObjectMessageUI = GetComponent<SelectionObjectMessageUI>();
+                return _selectionObjectMessageUI;
+            }
+        }
+
+        #endregion
     } 
 }
