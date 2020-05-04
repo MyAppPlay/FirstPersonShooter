@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 807, y: 492}
-  m_MaxSize: {x: 22002, y: 14042}
+  m_MinSize: {x: 808, y: 492}
+  m_MaxSize: {x: 22003, y: 14042}
   vertical: 0
-  controlID: 1605
+  controlID: 2304
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1603
     height: 957
-  m_MinSize: {x: 532, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 533, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 1
-  controlID: 1567
+  controlID: 2305
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1544
+  controlID: 2306
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fce0ffff72fbffff
+      m_ExpandedIDs: ca9bfffffce0ffff72fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -765,8 +765,8 @@ MonoBehaviour:
     y: 0
     width: 1323
     height: 443
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -1000,10 +1000,10 @@ MonoBehaviour:
     y: 443
     width: 1603
     height: 514
-  m_MinSize: {x: 532, y: 271}
-  m_MaxSize: {x: 18002, y: 10021}
+  m_MinSize: {x: 533, y: 271}
+  m_MaxSize: {x: 18003, y: 10021}
   vertical: 0
-  controlID: 1568
+  controlID: 2243
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1023,8 +1023,8 @@ MonoBehaviour:
     y: 0
     width: 468
     height: 514
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1121,19 +1121,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Models
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Models
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\FerstPersoShooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a63e0000
-    m_LastClickedID: 16038
+    m_SelectedIDs: ca3e0000
+    m_LastClickedID: 16074
     m_ExpandedIDs: 00000000a63e0000a83e0000aa3e0000ac3e0000ae3e0000b03e0000c23e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1187,24 +1187,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 5e670000
+    m_LastClickedInstanceID: 26462
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000563200007ede020008340000986e010016340000c2310000f09700003a3c00007cfa00009c320000860801003c780000f8310000b04000001c4f0000f4390000a63a00003e62000002300000983c00000000000030e300008ae6000092ed0000b0410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Wall
+      m_OriginalName: Wall
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 26462
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 15}
     m_CreateAssetUtility:
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 26462
   m_LastVerticalScrollValue: 0
 --- !u!114 &20
 MonoBehaviour:
