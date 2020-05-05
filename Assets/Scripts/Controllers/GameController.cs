@@ -3,7 +3,7 @@
 
 namespace SecondAttempt
 {
-    public class GameController : MonoBehaviour
+    public sealed class GameController : MonoBehaviour
     {
         private Controllers _controllers;
 

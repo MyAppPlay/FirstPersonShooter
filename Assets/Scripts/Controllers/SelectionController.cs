@@ -32,7 +32,7 @@ namespace SecondAttempt
             }
             else if (!_nullString)
             {
-                UIInterface.SelectionObjectMessageUI.text = string.Empty;
+                UIInterface.SelectionObjectMessageUI.Text = string.Empty;
                 _nullString = true;
                 _dedicateObject = null;
                 _isSelectedObject = false;
@@ -54,12 +54,12 @@ namespace SecondAttempt
             _selectedObject = obj.GetComponent<ISelectObject>();
             if (_selectedObject != null)
             {
-                UIInterface.SelectionObjectMessageUI.text = _selectedObject.GetMessage();
+                UIInterface.SelectionObjectMessageUI.Text = _selectedObject.GetMessage();
                 _isSelectedObject = true;
             }
             else
             {
-                UIInterface.SelectionObjectMessageUI.text = string.Empty;
+                UIInterface.SelectionObjectMessageUI.Text = string.Empty;
                 _isSelectedObject = false;
             }
             _dedicateObject = obj;

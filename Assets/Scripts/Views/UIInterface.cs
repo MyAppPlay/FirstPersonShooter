@@ -7,8 +7,8 @@ namespace SecondAttempt
     {
         #region Fields
 
-        private FlashLightUIText _flashLightUIText;
-        private FlashLightUIBar _flashLightUIBar;
+        private FlashLightUiText _flashLightUIText;
+        private FlashLightUiBar _flashLightUIBar;
         private WeaponUIText _weaponUIText;
         private SelectionObjectMessageUI _selectionObjectMessageUI;
 
@@ -17,23 +17,23 @@ namespace SecondAttempt
 
         #region Properties
 
-        public FlashLightUIText LightUIText
+        public FlashLightUiText LightUIText
         {
             get
             {
                 if (!_flashLightUIText)
-                    _flashLightUIText = FindObjectOfType<FlashLightUIText>();
+                    _flashLightUIText = FindObjectOfType<FlashLightUiText>();
                 return _flashLightUIText;
             }
         }
 
 
-        public FlashLightUIBar FlashLightUIBar
+        public FlashLightUiBar FlashLightUIBar
         {
             get
             {
                 if (!_flashLightUIBar)
-                    _flashLightUIBar = GetComponent<FlashLightUIBar>();
+                    _flashLightUIBar = GetComponent<FlashLightUiBar>();
                 return _flashLightUIBar;
             }
         }

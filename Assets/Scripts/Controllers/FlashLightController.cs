@@ -3,43 +3,59 @@
 
 namespace SecondAttempt
 {
-    public class FlashLightController : BaseController, IExecute, IInitialization
+    public sealed class FlashLightController : BaseController, IExecute, IInitialization
     {
         private FlashLightModel _flashLightModel;
-        private FlashLightUIText _flashLightUI;
-        private bool _light;
 
         public void Initialization()
         {
-            _flashLightModel = Object.FindObjectOfType<FlashLightModel>();
-            _flashLightUI = Object.FindObjectOfType<FlashLightUIText>();
+            UIInterface.LightUIText.SetActive(false);
+            UIInterface.FlashLightUIBar.SetActive(false);
         }
 
-        public void Execute()
+        public override void On(params BaseObjectInScene[] flashLight)
         {
-            _flashLightModel.Rotation();
-            _flashLightModel.EditBatteryCharge(_light);
-
-            _flashLightUI.Text = _flashLightModel.BattaryChargeCurrent;
-            _flashLightUI.Fill = _flashLightModel.BattaryChargeCurrent / 100;
-        }
-
-        public override void On()
-        {
-            _light = true;
             if (IsActive) return;
+            if (flashLight.Length > 0) _flashLightModel = flashLight[0] as FlashLightModel;
+            if (_flashLightModel == null) return;
             if (_flashLightModel.BattaryChargeCurrent <= 0) return;
-            base.On();
+            base.On(_flashLightModel);
             _flashLightModel.Switch(FlahLightActiveType.On);
-            _flashLightUI.SetActive(true);
+            UIInterface.LightUIText.SetActive(true);
+            UIInterface.FlashLightUIBar.SetActive(true);
+            UIInterface.FlashLightUIBar.SetColor(Color.green);
         }
 
         public override void Off()
         {
-            _light = false;
             if (!IsActive) return;
             base.Off();
-            _flashLightModel.Switch(FlahLightActiveType.Off);
+            _flashLightModel.Switch(FlahLightActiveType.Off); ;
+            UIInterface.FlashLightUIBar.SetActive(false);
+            UIInterface.LightUIText.SetActive(false);
+        }
+
+        public void Execute()
+        {
+            if (!IsActive)
+            {
+                return;
+            }
+            if (_flashLightModel.EditBatteryCharge())
+            {
+                UIInterface.LightUIText.Text = _flashLightModel.BattaryChargeCurrent;
+                UIInterface.FlashLightUIBar.Fill = _flashLightModel.Charge;
+                _flashLightModel.Rotation();
+
+                if (_flashLightModel.LowBattary())
+                {
+                    UIInterface.FlashLightUIBar.SetColor(Color.red);
+                }
+            }
+            else
+            {
+                Off();
+            }
         }
     }
 }

@@ -1,18 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class FlashLightUIBar : MonoBehaviour
+
+namespace SecondAttempt
 {
-    // Start is called before the first frame update
-    void Start()
+    public sealed class FlashLightUiBar : MonoBehaviour
     {
-        
-    }
+        private Image _bar;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            _bar = GetComponent<Image>();
+        }
+
+        public float Fill
+        {
+            set => _bar.fillAmount = value;
+        }
+
+        public void SetActive(bool value)
+        {
+            _bar.gameObject.SetActive(value);
+        }
+
+        public void SetColor(Color col)
+        {
+            _bar.color = col;
+        }
     }
 }
