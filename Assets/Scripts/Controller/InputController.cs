@@ -1,19 +1,28 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public sealed class InputController : BaseController, IExecute
     {
+        #region Fields
+
         private KeyCode _activeFlashLight = KeyCode.F;
         private KeyCode _cancel = KeyCode.Escape;
         private KeyCode _reloadClip = KeyCode.R;
+
         private int _mouseButton = (int)MouseButton.LeftButton;
+
+        #endregion
+
 
         public InputController()
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-		
+
+        #region Methods
+
         public void Execute()
         {
             if (!IsActive) return;
@@ -27,7 +36,7 @@ namespace Geekbrains
             {
                 SelectWeapon(0);
             }
-            
+
             if (Input.GetMouseButton(_mouseButton))
             {
                 if (ServiceLocator.Resolve<WeaponController>().IsActive)
@@ -51,7 +60,6 @@ namespace Geekbrains
             }
         }
 
-
         /// <summary>
         /// Выбор оружия
         /// </summary>
@@ -65,5 +73,7 @@ namespace Geekbrains
                 ServiceLocator.Resolve<WeaponController>().On(tempWeapon);
             }
         }
+
+        #endregion
     }
 }

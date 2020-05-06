@@ -1,8 +1,10 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
     public sealed class WeaponController : BaseController
     {
         private Weapon _weapon;
+
+        #region Methods
 
         public override void On(params BaseObjectScene[] weapon)
         {
@@ -35,5 +37,7 @@
             _weapon.ReloadClip();
             UiInterface.WeaponUiText.ShowData(_weapon.Clip.CountAmmunition, _weapon.CountClip);
         }
+
+        #endregion
     }
 }

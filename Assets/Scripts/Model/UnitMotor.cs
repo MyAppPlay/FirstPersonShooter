@@ -1,29 +1,34 @@
-﻿using Geekbrains;
+﻿using SecondAttempt;
 using UnityEngine;
+
 
 public sealed class UnitMotor : IMotor
 {
-	private Transform _instance;
+    #region Fields
 
-	private float _speedMove =10;
-	private float _jumpPower = 10;
-	private float _gravityForce;
-	private Vector2 _input;
-	private Vector3 _moveVector;
-	private CharacterController _characterController;
-	private Transform _head;
+    public float XSensitivity = 2f;
+    public float YSensitivity = 2f;
+    public float MinimumX = -90f;
+    public float MaximumX = 90f;
+    public float SmoothTime = 5f;
+    public bool ClampVerticalRotation = true;
+    public bool Smooth;
 
-	public float XSensitivity = 2f;
-	public float YSensitivity = 2f;
-	public bool ClampVerticalRotation = true;
-	public float MinimumX = -90F;
-	public float MaximumX = 90F;
-	public bool Smooth;
-	public float SmoothTime = 5f;
-	private Quaternion _characterTargetRot;
-	private Quaternion _cameraTargetRot;
+    private float _speedMove = 10;
+    private float _jumpPower = 10;
+    private float _gravityForce = 0.0f;
 
-	public UnitMotor(CharacterController instance)
+    private Transform _instance;
+    private Transform _head;
+    private Vector2 _input;
+    private Vector3 _moveVector;
+    private Quaternion _characterTargetRot;
+    private Quaternion _cameraTargetRot;
+    private CharacterController _characterController;
+
+    #endregion
+
+    public UnitMotor(CharacterController instance)
 	{
 		_instance = instance.transform;
 		_characterController = instance;
@@ -33,73 +38,77 @@ public sealed class UnitMotor : IMotor
 		_cameraTargetRot = _head.localRotation;
 	}
 
-	public void Move()
-	{
-		CharecterMove();
-		GamingGravity();
+    #region Methods
 
-		LookRotation(_instance, _head);
-	}
+    public void Move()
+    {
+        CharecterMove();
+        GamingGravity();
 
-	private void CharecterMove()
-	{
-		if (_characterController.isGrounded)
-		{
-			_input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-			Vector3 desiredMove = _instance.forward * _input.y + _instance.right * _input.x;
-			_moveVector.x = desiredMove.x * _speedMove;
-			_moveVector.z = desiredMove.z * _speedMove;
-		}
+        LookRotation(_instance, _head);
+    }
 
-		_moveVector.y = _gravityForce;
-		_characterController.Move(_moveVector * Time.deltaTime);
-	}
+    private void CharecterMove()
+    {
+        if (_characterController.isGrounded)
+        {
+            _input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            Vector3 desiredMove = _instance.forward * _input.y + _instance.right * _input.x;
+            _moveVector.x = desiredMove.x * _speedMove;
+            _moveVector.z = desiredMove.z * _speedMove;
+        }
 
-	private void GamingGravity()
-	{
-		if (!_characterController.isGrounded) _gravityForce -= 30 * Time.deltaTime;
-		else _gravityForce = -1;
-		if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded) _gravityForce = _jumpPower;
-	}
+        _moveVector.y = _gravityForce;
+        _characterController.Move(_moveVector * Time.deltaTime);
+    }
 
-	private void LookRotation(Transform character, Transform camera)
-	{
-		float yRot = Input.GetAxis("Mouse X") * XSensitivity;
-		float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
+    private void GamingGravity()
+    {
+        if (!_characterController.isGrounded) _gravityForce -= 30 * Time.deltaTime;
+        else _gravityForce = -1;
+        if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded) _gravityForce = _jumpPower;
+    }
 
-		_characterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
-		_cameraTargetRot *= Quaternion.Euler(-xRot, 0f, 0f);
+    private void LookRotation(Transform character, Transform camera)
+    {
+        float yRot = Input.GetAxis("Mouse X") * XSensitivity;
+        float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
 
-		if (ClampVerticalRotation)
-			_cameraTargetRot = ClampRotationAroundXAxis(_cameraTargetRot);
+        _characterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
+        _cameraTargetRot *= Quaternion.Euler(-xRot, 0f, 0f);
 
-		if (Smooth)
-		{
-			character.localRotation = Quaternion.Slerp(character.localRotation, _characterTargetRot,
-				SmoothTime * Time.deltaTime);
-			camera.localRotation = Quaternion.Slerp(camera.localRotation, _cameraTargetRot,
-				SmoothTime * Time.deltaTime);
-		}
-		else
-		{
-			character.localRotation = _characterTargetRot;
-			camera.localRotation = _cameraTargetRot;
-		}
-	}
+        if (ClampVerticalRotation)
+            _cameraTargetRot = ClampRotationAroundXAxis(_cameraTargetRot);
 
-	private Quaternion ClampRotationAroundXAxis(Quaternion q)
-	{
-		q.x /= q.w;
-		q.y /= q.w;
-		q.z /= q.w;
-		q.w = 1.0f;
+        if (Smooth)
+        {
+            character.localRotation = Quaternion.Slerp(character.localRotation, _characterTargetRot,
+                SmoothTime * Time.deltaTime);
+            camera.localRotation = Quaternion.Slerp(camera.localRotation, _cameraTargetRot,
+                SmoothTime * Time.deltaTime);
+        }
+        else
+        {
+            character.localRotation = _characterTargetRot;
+            camera.localRotation = _cameraTargetRot;
+        }
+    }
 
-		float angleX = 2.0f * Mathf.Rad2Deg * Mathf.Atan(q.x);
+    private Quaternion ClampRotationAroundXAxis(Quaternion q)
+    {
+        q.x /= q.w;
+        q.y /= q.w;
+        q.z /= q.w;
+        q.w = 1.0f;
 
-		angleX = Mathf.Clamp(angleX, MinimumX, MaximumX);
+        float angleX = 2.0f * Mathf.Rad2Deg * Mathf.Atan(q.x);
 
-		q.x = Mathf.Tan(0.5f * Mathf.Deg2Rad * angleX);
+        angleX = Mathf.Clamp(angleX, MinimumX, MaximumX);
 
-		return q;
-	}
+        q.x = Mathf.Tan(0.5f * Mathf.Deg2Rad * angleX);
+
+        return q;
+    }
+
+    #endregion
 }

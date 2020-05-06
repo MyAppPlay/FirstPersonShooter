@@ -1,16 +1,16 @@
 ﻿using System;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public sealed class TimeRemaining : ITimeRemaining
     {
         #region ITimeRemaining
         
-        public Action Method { get; }
         public bool IsRepeating { get; }
         public float Time { get; }
         public float CurrentTime { get; set; }
+        public Action Method { get; }
         
         #endregion
 

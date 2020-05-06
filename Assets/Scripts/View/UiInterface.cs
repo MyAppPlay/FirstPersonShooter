@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public sealed class UiInterface
     {

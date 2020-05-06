@@ -2,21 +2,33 @@
 using UnityEngine;
 using static UnityEngine.Random;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public sealed class FlashLightModel : BaseObjectScene
     {
+        #region Fields
+
         [SerializeField] private float _speed = 11.0f;
-        [SerializeField] private float _batteryChargeMax;
+        [SerializeField] private float _batteryChargeMax = 10.0f;
         [SerializeField] private float _intensity = 1.5f;
-        private Light _light;
-        private Transform _goFollow;
-        private Vector3 _vecOffset;
+
         private float _share;
         private float _takeAwayTheIntensity;
 
+        private Light _light;
+        private Transform _goFollow;
+        private Vector3 _vecOffset;
+
+        #endregion
+
+
+        #region Property
+
         public float Charge => BatteryChargeCurrent / _batteryChargeMax;
         public float BatteryChargeCurrent { get; private set; }
+
+        #endregion
 
         protected override void Awake()
         {
@@ -29,6 +41,8 @@ namespace Geekbrains
             _share = _batteryChargeMax / 4.0f;
             _takeAwayTheIntensity = _intensity / (_batteryChargeMax * 100.0f);
         }
+
+        #region Methods
 
         public void Switch(FlashLightActiveType value)
         {
@@ -55,7 +69,7 @@ namespace Geekbrains
             transform.rotation = Quaternion.Lerp(transform.rotation,
                 _goFollow.rotation, _speed * Time.deltaTime);
         }
-        
+
         public bool EditBatteryCharge()
         {
             if (BatteryChargeCurrent > 0)
@@ -90,5 +104,7 @@ namespace Geekbrains
             }
             return false;
         }
+
+        #endregion
     }
 }

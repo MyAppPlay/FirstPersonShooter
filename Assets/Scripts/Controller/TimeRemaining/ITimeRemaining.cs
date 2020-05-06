@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public interface ITimeRemaining
     {

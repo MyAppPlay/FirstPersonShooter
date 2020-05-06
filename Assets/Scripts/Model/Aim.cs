@@ -1,15 +1,24 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public sealed class Aim : MonoBehaviour, ICollision, ISelectObj
     {
-        public event Action OnPointChange = delegate {  };
-		
+        #region Fields
+
         public float Hp = 100;
+        public event Action OnPointChange = delegate { };
+
         private bool _isDead;
         private float _timeToDestroy = 10.0f;
+
+        #endregion
+
+
+        #region Methods
+
         //todo дописать поглащение урона
         public void CollisionEnter(InfoCollision info)
         {
@@ -36,5 +45,7 @@ namespace Geekbrains
         {
             return $"{gameObject.name} - {Hp}";
         }
+
+        #endregion    
     }
 }

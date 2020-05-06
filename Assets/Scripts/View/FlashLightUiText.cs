@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Geekbrains
+namespace SecondAttempt
 {
 	public sealed  class FlashLightUiText : MonoBehaviour
 	{

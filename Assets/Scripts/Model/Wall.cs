@@ -1,4 +1,4 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
 	public sealed class Wall : BaseObjectScene, ISelectObj
 	{

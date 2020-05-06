@@ -1,8 +1,10 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
     public sealed class PlayerController : BaseController, IExecute
     {
         private readonly IMotor _motor;
+
+        #region Methods
 
         public PlayerController(IMotor motor)
         {
@@ -14,5 +16,7 @@
             if (!IsActive) return;
             _motor.Move();
         }
+
+        #endregion
     }
 }

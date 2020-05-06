@@ -1,13 +1,16 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
     public abstract class BaseController
     {
         protected UiInterface UiInterface;
+
+        #region Methods
+
         protected BaseController()
         {
             UiInterface = new UiInterface();
         }
-        
+
         public bool IsActive { get; private set; }
 
         public virtual void On()
@@ -36,5 +39,7 @@
                 Off();
             }
         }
+
+        #endregion
     }
 }
