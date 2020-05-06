@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-
-namespace SecondAttempt
+namespace Geekbrains
 {
     public readonly struct InfoCollision
     {

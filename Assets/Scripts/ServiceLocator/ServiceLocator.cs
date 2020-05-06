@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 
 
-namespace SecondAttempt
+namespace Geekbrains
 {
-    public static class ServiceLocator 
+    public static class ServiceLocator
     {
-        private static readonly Dictionary<Type, object> _serviceContainer = new Dictionary<Type, object>();
+        private static readonly Dictionary<Type, object> _servicecontainer = 
+            new Dictionary<Type, object>();
 
-        public static void SetServise<T>(T value) where T : class
+        public static void SetService<T>(T value) where T : class
         {
             var typeValue = value.GetType();
-            if (!_serviceContainer.ContainsKey(typeValue))
+            if (!_servicecontainer.ContainsKey(typeValue))
             {
-                _serviceContainer[typeValue] = value;
+                _servicecontainer[typeValue] = value;
             }
         }
-
+ 
         public static T Resolve<T>()
         {
-            return (T)_serviceContainer[typeof(T)];
+            return (T)_servicecontainer[typeof(T)];
         }
     }
 }
