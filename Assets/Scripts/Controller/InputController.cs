@@ -30,9 +30,9 @@ namespace SecondAttempt
             {
                 ServiceLocator.Resolve<FlashLightController>().Switch(ServiceLocator.Resolve<Inventory>().FlashLight);
             }
-            //todo реализовать выбор оружия по колесику мыши
+            //todo реализовать выбор оружия по колесику мыши +
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetAxis("Mouse ScrollWheel") != 0)
             {
                 SelectWeapon(0);
             }

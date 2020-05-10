@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SecondAttempt.BaseController" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAMAAEAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.CopyOfBaseController" Collapsed="true">
+    <Position X="35" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAMAAEAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Copy1OfCopyOfBaseController" Collapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAMAAEAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.CopyOfCopyOfBaseController" Collapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAMAAEAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Controllers" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgACAAAAABAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\Controllers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecondAttempt.FlashLightController" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAACAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\FlashLightController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondAttempt.GameController" Collapsed="true">
+    <Position X="35" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.InputController" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAQAAAAAAAAAAIAAAAQAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\InputController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondAttempt.PlayerController" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\PlayerController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondAttempt.SelectionController" Collapsed="true">
+    <Position X="21" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAAAAAAQAAAAAAAAAAAQAgAAACAAAAAMAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\SelectionController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondAttempt.TimeRemaining" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAgAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Controller\TimeRemaining\TimeRemaining.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecondAttempt.TimeRemainingController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\TimeRemaining\TimeRemainingController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecondAttempt.TimeRemainingExtensions" Collapsed="true">
+    <Position X="33.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAABAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\TimeRemaining\TimeRemainingExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.WeaponController" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAIAEAAEAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Controller\WeaponController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.CustumDebug" Collapsed="true">
+    <Position X="29.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Helper\CustumDebug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.TagManager" Collapsed="true">
+    <Position X="35" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\TagManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Aim" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAQAA=</HashCode>
+      <FileName>Assets\Scripts\Model\Aim.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecondAttempt.Ammunition" Collapsed="true">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAgIAAAAAAAIAAAAgAAAAAQAAAABgAEE=</HashCode>
+      <FileName>Assets\Scripts\Model\Ammunition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.BaseObjectScene" Collapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAEAAAAIEAAAAgAAgAYAAAQAAAAUAAAAoIAACEA=</HashCode>
+      <FileName>Assets\Scripts\Model\BaseObjectScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Bullet" Collapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.FlashLightModel" Collapsed="true">
+    <Position X="18.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAEAAAQAgIAAEAAAAAAAEACAAABABAAAAAAAQkA=</HashCode>
+      <FileName>Assets\Scripts\Model\FlashLightModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Gun" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Inventory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAggAACAABA=</HashCode>
+      <FileName>Assets\Scripts\Model\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SecondAttempt.Wall" Collapsed="true">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\Wall.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondAttempt.Weapon" Collapsed="true">
+    <Position X="16.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgACAAAAIAAgAAIQAEEAAkAAMAAAAAJAABgBA=</HashCode>
+      <FileName>Assets\Scripts\Model\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.ServiceLocator" Collapsed="true">
+    <Position X="31.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ServiceLocator\ServiceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.ServiceLocatorMonoBehaviour" Collapsed="true">
+    <Position X="33.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ServiceLocator\ServiceLocatorMonoBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.Test" Collapsed="true">
+    <Position X="28" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.AimUiText" Collapsed="true">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEIAAAAAAAASEA=</HashCode>
+      <FileName>Assets\Scripts\View\AimUiText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.FlashLightUiBar" Collapsed="true">
+    <Position X="31.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\View\FlashLightUiBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.FlashLightUiText" Collapsed="true">
+    <Position X="33.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\View\FlashLightUiText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.SelectionObjMessageUi" Collapsed="true">
+    <Position X="29.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\View\SelectionObjMessageUi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.UiInterface" Collapsed="true">
+    <Position X="35" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAIAAIAAAAABAAEAAIAAAAACgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\View\UiInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondAttempt.WeaponUiText" Collapsed="true">
+    <Position X="29.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAAAIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\View\WeaponUiText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitMotor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAEAAAABIIIgIAAAEAAqABAAAIAAAgFAAAAAAFBAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\UnitMotor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="SecondAttempt.InfoCollision" Collapsed="true">
+    <Position X="29.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Helper\InfoCollision.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SecondAttempt.Clip" Collapsed="true">
+    <Position X="28" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\Clip.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="SecondAttempt.ITimeRemaining" Collapsed="true">
+    <Position X="28" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAgAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Controller\TimeRemaining\ITimeRemaining.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecondAttempt.ICollision" Collapsed="true">
+    <Position X="28" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\ICollision.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecondAttempt.IExecute" Collapsed="true">
+    <Position X="29.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\IExecute.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecondAttempt.IInitialization" Collapsed="true">
+    <Position X="31.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\IInitialization.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecondAttempt.IMotor" Collapsed="true">
+    <Position X="33.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\IMotor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SecondAttempt.ISelectObj" Collapsed="true">
+    <Position X="35" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interface\ISelectObj.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SecondAttempt.AmmunitionType" Collapsed="true">
+    <Position X="28" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAA=</HashCode>
+      <FileName>Assets\Scripts\Enums\AmmunitionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecondAttempt.FlahLightActiveType" Collapsed="true">
+    <Position X="29.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAIA=</HashCode>
+      <FileName>Assets\Scripts\Enums\FlahLightActiveType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecondAttempt.FlashLightActiveType" Collapsed="true">
+    <Position X="31.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAIA=</HashCode>
+      <FileName>Assets\Scripts\Enums\FlashLightActiveType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SecondAttempt.MouseButton" Collapsed="true">
+    <Position X="33.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enums\MouseButton.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
