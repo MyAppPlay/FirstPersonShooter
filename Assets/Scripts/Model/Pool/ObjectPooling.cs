@@ -7,7 +7,6 @@ namespace SecondAttempt
     [AddComponentMenu("Pool/ObjectPooling")]
     public class ObjectPooling 
     {
-
         #region Fields
 
         List<PoolObject> objects;

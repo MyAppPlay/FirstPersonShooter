@@ -3,7 +3,7 @@
 
 namespace SecondAttempt
 {
-    [AddComponentMenu("Pool/PoolObject")]
+    [AddComponentMenu("Pool/PoolObject")]//+
     public class PoolObject : MonoBehaviour
     {
         #region Methods

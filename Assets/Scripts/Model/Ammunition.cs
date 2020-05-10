@@ -12,7 +12,7 @@ namespace SecondAttempt
         [SerializeField] private float _timeToDestruct = 3.0f;
         [SerializeField] private float _baseDamage = 10.0f;
 
-        protected float _curDamage; // todo доделать свой урон
+        protected float _curDamage; // todo доделать свой урон-
         private float _lossOfDamageAtTime = 0.2f;
 
         private ITimeRemaining _timeRemaining;
