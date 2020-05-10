@@ -1,4 +1,4 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
 	public enum MouseButton : byte
 	{

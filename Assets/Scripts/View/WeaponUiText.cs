@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
 	public sealed class WeaponUiText : MonoBehaviour
 	{
@@ -12,14 +13,18 @@ namespace Geekbrains
 			_text = GetComponent<Text>();
 		}
 
-		public void ShowData(int countAmmunition, int countClip)
-		{
-			_text.text = $"{countAmmunition}/{countClip}";
-		}
+        #region Methods
 
-		public void SetActive(bool value)
-		{
-			_text.gameObject.SetActive(value);
-		}
-	}
+        public void ShowData(int countAmmunition, int countClip)
+        {
+            _text.text = $"{countAmmunition}/{countClip}";
+        }
+
+        public void SetActive(bool value)
+        {
+            _text.gameObject.SetActive(value);
+        }
+
+        #endregion
+    }
 }

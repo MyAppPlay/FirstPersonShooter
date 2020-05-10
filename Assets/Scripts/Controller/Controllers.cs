@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public sealed class Controllers : IInitialization
     {
         private readonly IExecute[] _executeControllers;
 
         public int Length => _executeControllers.Length;
+
+        public IExecute this[int index] => _executeControllers[index];
 
         public Controllers()
         {
@@ -33,7 +35,6 @@ namespace Geekbrains
             _executeControllers[4] = ServiceLocator.Resolve<SelectionController>();
         }
         
-        public IExecute this[int index] => _executeControllers[index];
 
         public void Initialization()
         {

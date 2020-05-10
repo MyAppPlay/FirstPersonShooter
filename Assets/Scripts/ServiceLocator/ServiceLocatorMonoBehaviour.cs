@@ -2,11 +2,13 @@
 using UnityEngine;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public static class ServiceLocatorMonoBehaviour
     {
         private static Dictionary<object, object> _servicecontainer = null;
+
+        #region Methods
 
         public static T GetService<T>(bool createObjectIfNotFound = true) where T : Object
         {
@@ -45,5 +47,7 @@ namespace Geekbrains
             }
             return (T)_servicecontainer[typeof(T)];
         }
+
+        #endregion
     }
 }

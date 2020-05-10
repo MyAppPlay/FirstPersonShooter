@@ -1,24 +1,21 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public abstract class BaseObjectScene : MonoBehaviour
     {
+        #region Fields
+
         private int _layer;
         private Color _color;
         private bool _isVisible;
+
         [HideInInspector] public Rigidbody Rigidbody;
         [HideInInspector] public Transform Transform;
 
-        #region UnityFunction
-
-        protected virtual void Awake()
-        {
-            Rigidbody = GetComponent<Rigidbody>();
-            Transform = GetComponent<Transform>();
-        }
-        
         #endregion
+
 
         #region Property
 
@@ -75,7 +72,20 @@ namespace Geekbrains
 
         #endregion
 
+
+        #region UnityFunction
+
+        protected virtual void Awake()
+        {
+            Rigidbody = GetComponent<Rigidbody>();
+            Transform = GetComponent<Transform>();
+        }
+
+        #endregion
+
+
         #region PrivateFunction
+
         /// <summary>
         /// Выставляет слой себе и всем вложенным объектам в независимости от уровня вложенности
         /// </summary>
@@ -111,8 +121,11 @@ namespace Geekbrains
                 AskColor(d, color);
             }
         }
+
         #endregion
-        
+
+        #region PublicMethods
+
         /// <summary>
         /// Выключает физику у объекта и его детей
         /// </summary>
@@ -167,5 +180,7 @@ namespace Geekbrains
                 component.enabled = value;
             }
         }
+
+        #endregion
     }
 }

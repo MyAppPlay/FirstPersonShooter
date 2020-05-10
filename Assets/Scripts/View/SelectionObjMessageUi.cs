@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
 	public sealed  class SelectionObjMessageUi : MonoBehaviour
 	{
 		private Text _text;
 
-		private void Awake()
-		{
-			_text = GetComponent<Text>();
-		}
-
 		public string Text
 		{
 			set => _text.text = $"{value}";
+		}
+
+		private void Awake()
+		{
+			_text = GetComponent<Text>();
 		}
 
 		public void SetActive(bool value)

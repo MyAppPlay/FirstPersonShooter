@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public sealed class GameController : MonoBehaviour
     {
         private Controllers _controllers;
+
+        #region UNITY_Methods
+
         private void Start()
         {
             _controllers = new Controllers();
@@ -19,5 +22,7 @@ namespace Geekbrains
                 _controllers[i].Execute();
             }
         }
+
+        #endregion
     }
 }

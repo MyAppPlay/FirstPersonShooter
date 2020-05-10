@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public class Test : MonoBehaviour
     {

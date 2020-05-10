@@ -1,30 +1,38 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Geekbrains
+
+namespace SecondAttempt
 {
     public sealed class FlashLightUiBar : MonoBehaviour
     {
+
         private Image _bar;
 
-        private void Awake()
-        {
-            _bar = GetComponent<Image>();
-        }
 
         public float Fill
         {
             set => _bar.fillAmount = value;
         }
 
+
+        private void Awake()
+        {
+            _bar = GetComponent<Image>();
+        }
+
+        #region Methots
+
         public void SetActive(bool value)
         {
             _bar.gameObject.SetActive(value);
         }
-        
+
         public void SetColor(Color col)
         {
             _bar.color = col;
         }
+
+        #endregion
     }
 }

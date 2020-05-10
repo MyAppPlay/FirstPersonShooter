@@ -1,4 +1,4 @@
-﻿namespace Geekbrains
+﻿namespace SecondAttempt
 {
     public static class TagManager
     {

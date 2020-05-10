@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 
-namespace Geekbrains
+namespace SecondAttempt
 {
     public static partial class TimeRemainingExtensions
     {
