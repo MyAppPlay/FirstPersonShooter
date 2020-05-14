@@ -12,6 +12,11 @@ namespace SecondAttempt
 
         #endregion
 
+        private void Awake()
+        {
+            Initialize();
+        }
+
         #region Methods
 
         private void OnValidate()
@@ -20,11 +25,6 @@ namespace SecondAttempt
             {
                 pools[i].NamePrefab = pools[i].PrefabPoolObj.name;
             }
-        }
-
-        private void Awake()
-        {
-            Initialize();
         }
 
         private void Initialize()
