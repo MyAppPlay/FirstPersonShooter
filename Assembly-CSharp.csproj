@@ -127,8 +127,8 @@
     <Compile Include="Assets\Scripts\View\SelectionObjMessageUi.cs" />
     <Compile Include="Assets\Scripts\View\UiInterface.cs" />
     <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
-    <None Include="Assets\Easy Weapons\Readme.txt" />
     <None Include="Assets\ClassDiagram1.cd" />
+    <None Include="Assets\Easy Weapons\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/FerstPersoShooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
