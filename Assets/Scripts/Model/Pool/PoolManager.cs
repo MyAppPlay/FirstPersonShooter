@@ -32,13 +32,11 @@ namespace SecondAttempt
                 {
                     if (string.Compare(pools[i].NamePrefab, namePrefab) == 0) // Null reference for empty pool 
                     {
-                        {
                             result = pools[i].ObjectPooling.GetObject().gameObject;
                             result.transform.position = position;
                             result.transform.rotation = rotation;
                             result.SetActive(true);
                             return result;
-                        }
                     }
                 }
             }
