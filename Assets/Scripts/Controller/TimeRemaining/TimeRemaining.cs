@@ -7,10 +7,10 @@ namespace SecondAttempt
     {
         #region ITimeRemaining
         
+        public Action Method { get; }
         public bool IsRepeating { get; }
         public float Time { get; }
         public float CurrentTime { get; set; }
-        public Action Method { get; }
         
         #endregion
 

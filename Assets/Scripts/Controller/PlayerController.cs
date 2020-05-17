@@ -4,8 +4,6 @@
     {
         private readonly IMotor _motor;
 
-        #region Methods
-
         public PlayerController(IMotor motor)
         {
             _motor = motor;
@@ -16,7 +14,5 @@
             if (!IsActive) return;
             _motor.Move();
         }
-
-        #endregion
     }
 }

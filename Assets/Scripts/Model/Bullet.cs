@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class Bullet : Ammunition
     {
-        private void OnCollisionEnter(Collision collision) // todo своя обработка полета и получения урона-
+        private void OnCollisionEnter(Collision collision) // todo своя обработка полета и получения урона
         {
             // дописать доп урон
             var setDamage = collision.gameObject.GetComponent<ICollision>();

@@ -1,26 +1,16 @@
 ﻿using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public abstract class Ammunition : BaseObjectScene
     {
-        #region Fields
-
-        public AmmunitionType Type = AmmunitionType.Bullet;
-
-        [SerializeField] private float _timeToDestruct = 3.0f;
-        [SerializeField] private float _baseDamage = 10.0f;
-
-        protected float _curDamage; // todo доделать свой урон-
+        [SerializeField] private float _timeToDestruct = 10;
+        [SerializeField] private float _baseDamage = 10;
+        protected float _curDamage; // todo доделать свой урон
         private float _lossOfDamageAtTime = 0.2f;
-
         private ITimeRemaining _timeRemaining;
 
-        #endregion
-
-
-        #region UNITY_Methods
+        public AmmunitionType Type = AmmunitionType.Bullet;
 
         protected override void Awake()
         {
@@ -30,23 +20,10 @@ namespace SecondAttempt
 
         private void Start()
         {
+            Destroy(gameObject, _timeToDestruct);
             _timeRemaining = new TimeRemaining(LossOfDamage, 1.0f, true);
             _timeRemaining.AddTimeRemaining();
         }
-
-        #endregion
-
-        private void Update()
-        {
-            _timeToDestruct -= Time.deltaTime;
-            if (_timeToDestruct <= 0)
-            {
-                GetComponent<PoolObject>().ReturnToPool();
-                _timeToDestruct = 3.0f;
-            }
-        }
-
-        #region Method
 
         public void AddForce(Vector3 dir)
         {
@@ -61,10 +38,9 @@ namespace SecondAttempt
 
         protected void DestroyAmmunition()
         {
+            Destroy(gameObject);
             _timeRemaining.RemoveTimeRemaining();
-            GetComponent<PoolObject>().ReturnToPool();
+            // Вернуть в пул
         }
-
-        #endregion
     }
 }

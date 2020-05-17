@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class UiInterface

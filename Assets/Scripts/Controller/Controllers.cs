@@ -9,8 +9,6 @@ namespace SecondAttempt
 
         public int Length => _executeControllers.Length;
 
-        public IExecute this[int index] => _executeControllers[index];
-
         public Controllers()
         {
             IMotor motor = new UnitMotor(ServiceLocatorMonoBehaviour.GetService<CharacterController>());
@@ -35,6 +33,7 @@ namespace SecondAttempt
             _executeControllers[4] = ServiceLocator.Resolve<SelectionController>();
         }
         
+        public IExecute this[int index] => _executeControllers[index];
 
         public void Initialization()
         {

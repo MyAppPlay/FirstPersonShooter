@@ -8,8 +8,6 @@ namespace SecondAttempt
     {
         private static Dictionary<object, object> _servicecontainer = null;
 
-        #region Methods
-
         public static T GetService<T>(bool createObjectIfNotFound = true) where T : Object
         {
             if (_servicecontainer == null)
@@ -47,7 +45,5 @@ namespace SecondAttempt
             }
             return (T)_servicecontainer[typeof(T)];
         }
-
-        #endregion
     }
 }

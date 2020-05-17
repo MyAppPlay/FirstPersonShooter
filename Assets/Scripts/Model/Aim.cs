@@ -1,24 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class Aim : MonoBehaviour, ICollision, ISelectObj
     {
-        #region Fields
-
+        public event Action OnPointChange = delegate {  };
+		
         public float Hp = 100;
-        public event Action OnPointChange = delegate { };
-
         private bool _isDead;
         private float _timeToDestroy = 10.0f;
-
-        #endregion
-
-
-        #region Methods
-
         //todo дописать поглащение урона
         public void CollisionEnter(InfoCollision info)
         {
@@ -45,7 +36,5 @@ namespace SecondAttempt
         {
             return $"{gameObject.name} - {Hp}";
         }
-
-        #endregion    
     }
 }

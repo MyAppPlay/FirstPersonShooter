@@ -1,28 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class SelectionController : BaseController, IExecute
     {
-        #region Fields
-
         private readonly Camera _mainCamera;
         private readonly Vector2 _center;
-
         private readonly float _dedicateDistance = 20.0f;
-
-        private bool _nullString;
-        private bool _isSelectedObj;
-
         private GameObject _dedicatedObj;
         private ISelectObj _selectedObj;
-
-        #endregion
-
-
-        #region Methods
+        private bool _nullString;
+        private bool _isSelectedObj;
 
         public SelectionController()
         {
@@ -33,15 +22,15 @@ namespace SecondAttempt
         public void Execute()
         {
             if (!IsActive) return;
-            if (Physics.Raycast(_mainCamera.ScreenPointToRay(_center),
+            if (Physics.Raycast(_mainCamera.ScreenPointToRay(_center), 
                 out var hit, _dedicateDistance))
             {
                 SelectObject(hit.collider.gameObject);
                 _nullString = false;
             }
-            else if (!_nullString)
+            else if(!_nullString)
             {
-                UiInterface.SelectionObjMessageUi.Text = String.Empty;
+                UiInterface.SelectionObjMessageUi.Text = string.Empty;
                 _nullString = true;
                 _dedicatedObj = null;
                 _isSelectedObj = false;
@@ -81,7 +70,5 @@ namespace SecondAttempt
             }
             _dedicatedObj = obj;
         }
-
-        #endregion
     }
 }

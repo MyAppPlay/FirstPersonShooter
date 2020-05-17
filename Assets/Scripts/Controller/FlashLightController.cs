@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class FlashLightController : BaseController, IExecute, IInitialization
     {
         private FlashLightModel _flashLightModel;
-
-        #region Methods
 
         public void Initialization()
         {
@@ -32,14 +29,14 @@ namespace SecondAttempt
         {
             if (!IsActive) return;
             base.Off();
-            _flashLightModel.Switch(FlashLightActiveType.Off); ;
+            _flashLightModel.Switch(FlashLightActiveType.Off);;
             UiInterface.FlashLightUiBar.SetActive(false);
             UiInterface.LightUiText.SetActive(false);
         }
 
         public void Execute()
         {
-            if (!IsActive)
+            if(!IsActive)
             {
                 return;
             }
@@ -59,7 +56,5 @@ namespace SecondAttempt
                 Off();
             }
         }
-
-        #endregion
     }
 }

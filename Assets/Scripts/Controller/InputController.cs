@@ -1,28 +1,19 @@
 ﻿using UnityEngine;
 
-
 namespace SecondAttempt
 {
     public sealed class InputController : BaseController, IExecute
     {
-        #region Fields
-
         private KeyCode _activeFlashLight = KeyCode.F;
         private KeyCode _cancel = KeyCode.Escape;
         private KeyCode _reloadClip = KeyCode.R;
-
         private int _mouseButton = (int)MouseButton.LeftButton;
-
-        #endregion
-
 
         public InputController()
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-
-        #region Methods
-
+		
         public void Execute()
         {
             if (!IsActive) return;
@@ -30,13 +21,13 @@ namespace SecondAttempt
             {
                 ServiceLocator.Resolve<FlashLightController>().Switch(ServiceLocator.Resolve<Inventory>().FlashLight);
             }
-            //todo реализовать выбор оружия по колесику мыши +
+            //todo реализовать выбор оружия по колесику мыши
 
-            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetAxis("Mouse ScrollWheel") != 0)
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SelectWeapon(0);
             }
-
+            
             if (Input.GetMouseButton(_mouseButton))
             {
                 if (ServiceLocator.Resolve<WeaponController>().IsActive)
@@ -60,6 +51,7 @@ namespace SecondAttempt
             }
         }
 
+
         /// <summary>
         /// Выбор оружия
         /// </summary>
@@ -73,7 +65,5 @@ namespace SecondAttempt
                 ServiceLocator.Resolve<WeaponController>().On(tempWeapon);
             }
         }
-
-        #endregion
     }
 }

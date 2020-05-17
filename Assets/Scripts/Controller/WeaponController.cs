@@ -4,8 +4,6 @@
     {
         private Weapon _weapon;
 
-        #region Methods
-
         public override void On(params BaseObjectScene[] weapon)
         {
             if (IsActive) return;
@@ -37,7 +35,5 @@
             _weapon.ReloadClip();
             UiInterface.WeaponUiText.ShowData(_weapon.Clip.CountAmmunition, _weapon.CountClip);
         }
-
-        #endregion
     }
 }
